@@ -17,8 +17,12 @@ def main():
     logger.info(settings)
 
     if settings.WEBHOOK_URL:
-        updater.start_webhook(listen="0.0.0.0", port=settings.PORT, url_path=settings.TOKEN)
-        updater.bot.setWebhook(settings.WEBHOOK_URL + settings.TOKEN)
+        updater.start_webhook(
+            listen="0.0.0.0",
+            port=settings.PORT,
+            url_path=settings.TOKEN,
+            webhook_url=settings.WEBHOOK_URL + settings.TOKEN
+        )
     else:
         updater.start_polling()
     # stop with ctrl-c or one of (SIGINT, SIGTERM, SIGABRT) to the updater process
