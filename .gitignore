@@ -1,0 +1,25 @@
+# Coverage directory used by tools like istanbul
+coverage
+.coverage
+
+# dotenv environment variables file
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+htmlcov/
+coverage.xml
+.coverage
+
+.mypy_cache
+.pytest_cache
+
+.vscode
+
+# convenience folder to put files without messing git status up
+.tray
+
