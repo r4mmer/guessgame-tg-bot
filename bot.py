@@ -13,6 +13,9 @@ def main():
 
     updater = configure_updater()
 
+    logger.info(settings.PORT)
+    logger.info(settings)
+
     if settings.WEBHOOK_URL:
         updater.start_webhook(listen="0.0.0.0", port=settings.PORT, url_path=settings.TOKEN)
         updater.bot.setWebhook(settings.WEBHOOK_URL + settings.TOKEN)

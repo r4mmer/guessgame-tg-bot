@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     TOKEN: str
-    PORT: int = 5000
+    PORT: int = 80
 
     MAX_VALUE: int = 100
     MAX_GUESSES: int = 2
